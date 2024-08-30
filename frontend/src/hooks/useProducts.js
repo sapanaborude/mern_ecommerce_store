@@ -7,7 +7,7 @@ export default function useProducts() {
   //get cat
   const getProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/product-list");
+      const { data } = await axios.get("https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-list");
       setproducts(data?.products);
     } catch (error) {
       console.log(error);

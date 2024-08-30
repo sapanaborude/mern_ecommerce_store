@@ -7,7 +7,7 @@ export default function useSubCategory() {
   //get subcat
   const getSubCategories = async () => {
     try {
-      const { data } = await axios.get("/api/v1/subcategory/get-subcategory");
+      const { data } = await axios.get("https://mern-ecommerce-store-37ut.onrender.com/api/v1/subcategory/get-subcategory");
       setSubCategories(data?.subcategory);
     } catch (error) {
       console.log(error);

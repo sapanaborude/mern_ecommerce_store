@@ -1,6 +1,5 @@
 {
   "name": "",
-  "proxy": "https://mern-ecommerce-store-37ut.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

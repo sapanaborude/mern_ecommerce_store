@@ -23,10 +23,10 @@ app.use(cors({
 app.use(express.json());
 
 //routes
-app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/category", categoryRoutes);
-app.use("/api/v1/subcategory", subCategoryRoutes);
-app.use("/api/v1/product", productRoutes);
+app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/auth", authRoutes);
+app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/category", categoryRoutes);
+app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/subcategory", subCategoryRoutes);
+app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/product", productRoutes);
 
 //rest api
 app.get("/", (req, res) => {
