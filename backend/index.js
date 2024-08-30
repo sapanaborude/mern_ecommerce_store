@@ -18,7 +18,7 @@ const app = express();
 
 //middlewares
 app.use(cors({
-  origin: ["http:localhost:3000", "https://mern-ecommerce-store-1.onrender.com"],
+  origin: ["https://mern-ecommerce-store-1.onrender.com"],
 }));
 app.use(express.json());
 
