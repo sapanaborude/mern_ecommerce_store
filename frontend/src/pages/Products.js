@@ -18,7 +18,7 @@ const Products = () => {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1category/get-category");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -35,7 +35,7 @@ const Products = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-list/${page}`);
+      const { data } = await axios.get(`https://mern-ecommerce-backend-c87p.onrender.com/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -50,7 +50,7 @@ const Products = () => {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-count");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/product/product-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -84,7 +84,7 @@ const Products = () => {
             <div className="col-md-3" key={p._id}>
               <div className="card m-2" >
                 <img
-                  src={`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-photo/${p._id}`}
+                  src={`https://mern-ecommerce-backend-c87p.onrender.com/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name} style={{ height: '200px' }}
                 />
