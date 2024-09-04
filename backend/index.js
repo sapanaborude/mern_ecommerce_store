@@ -17,9 +17,13 @@ connectDB();
 const app = express();
 
 //middlewares
+// Allow all origins
+app.use(cors());
+
 app.use(cors({
-  origin: ["https://mern-ecommerce-store-frontend-pum9.onrender.com/"],
+  origin: 'https://mern-ecommerce-store-frontend-pum9.onrender.com'
 }));
+
 app.use(express.json());
 
 //routes
