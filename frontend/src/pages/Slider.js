@@ -17,7 +17,7 @@ export default function Slider() {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-store-37ut.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -34,7 +34,7 @@ export default function Slider() {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-list/${page}`);
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -49,7 +49,7 @@ export default function Slider() {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-count");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -70,7 +70,7 @@ export default function Slider() {
                   {products?.map((p) => (
 
                     <div className="card d-none d-md-block" style={{ width: '200px' }} key={p._id}>
-                      <img src={`https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt="..." style={{ height: '200px', width: '200px' }} />
+                      <img src={`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-photo/${p._id}`} className="card-img-top" alt="..." style={{ height: '200px', width: '200px' }} />
                       <div className="card-body">
                         <h5 className="card-title">{p.name}</h5>
                         <h6>{p.price.toLocaleString("en-US", {

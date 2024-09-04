@@ -18,15 +18,15 @@ const app = express();
 
 //middlewares
 app.use(cors({
-  origin: ["https://mern-ecommerce-store-1.onrender.com"],
+  origin: ["https://mern-ecommerce-store-frontend-pum9.onrender.com/"],
 }));
 app.use(express.json());
 
 //routes
-app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/auth", authRoutes);
-app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/category", categoryRoutes);
-app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/subcategory", subCategoryRoutes);
-app.use("https://mern-ecommerce-store-37ut.onrender.com/api/v1/product", productRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/category", categoryRoutes);
+app.use("/api/v1/subcategory", subCategoryRoutes);
+app.use("/api/v1/product", productRoutes);
 
 //rest api
 app.get("/", (req, res) => {

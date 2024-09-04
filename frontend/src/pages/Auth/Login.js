@@ -18,7 +18,7 @@ const Login = () => {
   const signinUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://mern-ecommerce-store-37ut.onrender.com/api/v1/auth/login", {
+      const res = await axios.post("https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/login", {
         email,
         password,
       });

@@ -21,7 +21,7 @@ const AdminOrders = () => {
   
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-store-37ut.onrender.com/api/v1/auth/all-orders");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/all-orders");
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ const AdminOrders = () => {
 
   const handleChange = async (orderId, value) => {
     try {
-      const { data } = await axios.put(`https://mern-ecommerce-store-37ut.onrender.com/api/v1/auth/order-status/${orderId}`, {
+      const { data } = await axios.put(`https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/order-status/${orderId}`, {
         status: value,
       });
       getOrders();
@@ -93,7 +93,7 @@ const AdminOrders = () => {
                     <div className="row mb-2 p-3 card flex-row" key={p._id}>
                       <div className="col-md-4">
                         <img
-                          src={`https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-photo/${p._id}`}
+                          src={`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-photo/${p._id}`}
                           className="card-img-top"
                           alt={p.name}
                           width="100px"

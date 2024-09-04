@@ -17,7 +17,7 @@ const SubCategoryProduct = () => {
   const getProductsBySubCat = async () => {
     try {
       const { data } = await axios.get(
-        `https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-subcategory/${params.slug}`
+        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-subcategory/${params.slug}`
       );
       setProducts(data?.products);
       setSubCategory(data?.subcategory);
@@ -37,7 +37,7 @@ const SubCategoryProduct = () => {
               {products?.map((p) => (
                 <div className="card m-2" key={p._id}>
                   <img
-                    src={`https://mern-ecommerce-store-37ut.onrender.com/api/v1/product/product-photo/${p._id}`}
+                    src={`https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name} style={{ height: '200px' }}
                   />
