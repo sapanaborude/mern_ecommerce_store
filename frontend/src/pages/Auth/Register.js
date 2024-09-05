@@ -15,7 +15,7 @@ const Register = () => {
   const signupUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/register", {
+      const res = await axios.post("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/auth/register", {
         name,
         email,
         password,

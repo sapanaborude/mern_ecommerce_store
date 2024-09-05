@@ -28,7 +28,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put("https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/profile", {
+      const { data } = await axios.put("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/auth/profile", {
         name,
         email,
         password,

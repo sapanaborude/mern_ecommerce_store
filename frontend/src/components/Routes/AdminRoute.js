@@ -10,7 +10,7 @@ export default function PrivateRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1auth/admin-auth");
+      const res = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/auth/admin-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

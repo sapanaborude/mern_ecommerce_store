@@ -23,7 +23,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1category/get-category");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -35,7 +35,7 @@ const CreateProduct = () => {
 
   const getAllSubCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1subcategory/get-subcategory");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/subcategory/get-subcategory");
       if (data?.success) {
         setSubCategories(data?.subcategory);
       }
@@ -63,7 +63,7 @@ const CreateProduct = () => {
       productData.append("category", category);
       productData.append("subcategory", subcategory);
       const { data } = axios.post(
-        "https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/create-product",
+        "https://mern-ecommerce-backend-c87p.onrender.com/api/v1/product/create-product",
         productData
       );
       if (data?.success) {

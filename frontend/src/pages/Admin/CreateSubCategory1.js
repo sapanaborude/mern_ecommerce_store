@@ -22,7 +22,7 @@ const CreateSubCategory1 = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1category/get-category");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -39,7 +39,7 @@ const CreateSubCategory1 = () => {
   //get all cat
   const getAllSubCategory = async () => {
     try {
-      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1subcategory/get-subcategory");
+      const { data } = await axios.get("https://mern-ecommerce-backend-c87p.onrender.com/api/v1/subcategory/get-subcategory");
       if (data?.success) {
         setSubCategories(data?.subcategory);
       }
@@ -61,7 +61,7 @@ const CreateSubCategory1 = () => {
       subcatData.append("subcatName", subcatName);
       subcatData.append("category", category);
       const { data } = axios.post(
-        "https://mern-ecommerce-backend-c87p.onrender.com/api/v1subcategory/create-subcategory",
+        "https://mern-ecommerce-backend-c87p.onrender.com/api/v1/subcategory/create-subcategory",
         subcatData
       );
       if (data?.success) {
@@ -84,7 +84,7 @@ const CreateSubCategory1 = () => {
       subcatData.append("subcatName", subcatName);
       subcatData.append("category", category);
       const { data } = axios.put(
-        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1subcategory/update-subcategory/${id}`,
+        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1/subcategory/update-subcategory/${id}`,
         subcatData
       );
       if (data?.success) {
@@ -101,7 +101,7 @@ const CreateSubCategory1 = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1subcategory/delete-subcategory/${pId}`
+        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1/subcategory/delete-subcategory/${pId}`
       );
       if (data.success) {
         toast.success(`subcategory is deleted`);

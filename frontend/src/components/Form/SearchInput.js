@@ -11,7 +11,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1product/search/${values.keyword}`
+        `https://mern-ecommerce-backend-c87p.onrender.com/api/v1/product/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");
